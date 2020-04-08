@@ -1,0 +1,45 @@
+{
+  "name": "pact-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "provider-service": "node src/rest-api/provider/provider.js",
+    "consumer-service-test": "mocha --timeout 10000 src/rest-api/consumer/test/consumer.spec.js",
+    "consumer-service-pact": "mocha --timeout 10000 src/rest-api/consumer/test/consumerPact.spec.js",
+    "provider-pact-broker": "mocha --timeout 40000 src/rest-api/provider/test/providerPactBroker.spec.js",
+    "provider-pact-local": "mocha --timeout 40000 src/rest-api/provider/test/providerPactLocal.spec.js",
+    "publish-consumer": "node src/rest-api/consumer/consumerPactPublish.js",
+    "can-i-deploy": "pact-broker can-i-deploy --pacticipant 'DateConsumer' --latest --broker-base-url https://@@@.pact.dius.com.au --broker-username $PACT_USERNAME --broker-password $PACT_PASSWORD",
+    "format": "prettier --write --single-quote '**/*.{js,jsx,ts,tsx}'",
+    "eslint": "eslint src/* --ext .js --ext .jsx",
+    "consumer-message-service-test": "mocha --timeout 10000 src/message-queue/consumer/test/consumer-message.spec.js",
+    "provider-message-pact-local": "mocha --timeout 10000 src/message-queue/provider/test/provider-message.spec.js",
+    "provider-message-pact-broker": "mocha --timeout 40000 src/message-queue/provider/test/provider-message-broker.spec.js",
+    "publish-consumer-message": "node src/message-queue/consumer/consumer-message-publish.js",
+    "can-i-deploy-message": "pact-broker can-i-deploy --pacticipant 'dateHandler consumer' --latest --broker-base-url https://@@@.pact.dius.com.au --broker-username $PACT_USERNAME --broker-password $PACT_PASSWORD"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^7.1.1",
+    "cli-color": "^1.1.0",
+    "concurrently": "^3.1.0",
+    "mocha": "^3.2.0",
+    "nock": "^10.0.2",
+    "@pact-foundation/pact": "^7.2.0",
+    "@pact-foundation/pact-node": "^6.20.0",
+    "prettier": "^1.15.3",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "moment": "^2.18.1",
+    "superagent": "^3.3.2",
+    "path": "^0.12.7"
+  },
+  "author": "",
+  "license": "UNLICENSED"
+}
