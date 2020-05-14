@@ -16,7 +16,7 @@ module.exports = {
     withRequest: {
       method: "GET",
       path: "/provider/validDate",
-      query: { date: "2018-11-29" }
+      query: { date: "2020-11-11" }
     },
     willRespondWith: {
       status: 200,
@@ -36,7 +36,7 @@ module.exports = {
       query: { date: "" }
     },
     willRespondWith: {
-      status: 400,
+      status: 404,
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
