@@ -118,26 +118,6 @@ Above command will verify consumer contract.
 
 ![Screenshot](provider.png)
 
-## Verify if Consumer can deploy
-
-## Install pack-broker CLI
-
-#### OSx
-
-```
-curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.62.0/pact-1.62.0-osx.tar.gz
-
-tar xzf pact-1.62.0-osx.tar.gz
-
-cd pact/bin
-
-./pact-mock-service --help start
-
-./pact-provider-verifier --help verify
-```
-
-set pack-broker(/Users/sai.krishna/pact/bin) to PATH
-
 #### Windows + Linux
 
 Instructions can be found - https://github.com/pact-foundation/pact-ruby-standalone/releases
