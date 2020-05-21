@@ -14,15 +14,23 @@ pipeline {
         }
       }
       
-      stage('Run Provider Test') {
+      stage('Start Provider service') {
          steps {
-             sh 'npm run consumer-service-pact'
-        }
+             sh 'npm run provider-service'
+        } 
+        
+      }
+      
+      stage('Run Provider Verifier and Publish to Pact broker') {
+         steps {
+             sh 'npm run provider-service'
+        } 
+        
       }
       
       stage('Publish Consumer Pact to Pact Broker') {
          steps {
-             sh 'node src/rest-api/consumer/consumerPactPublish.js'
+             sh 'npm run provider-pact-broker'
         }
       }
    }
