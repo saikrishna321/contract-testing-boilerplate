@@ -3,9 +3,9 @@ const path = require('path');
 
 let opts = {
   pactFilesOrDirs: [path.resolve(__dirname, '../../../pacts/')],
-  pactBroker: 'http://pact_broker.com',
-  pactBrokerUsername: process.env.PACT_USERNAME,
-  pactBrokerPassword: process.env.PACT_PASSWORD,
+  pactBroker: 'https://test.pact.dius.com.au',
+  pactBrokerUsername: 'dXfltyFMgNOFZAxr8io9wJ37iUpY42M',
+  pactBrokerPassword: 'O5AIZWxelWbLvqMd8PkAVycBJh2Psyg1',
   consumerVersion: '1.0',
 };
 

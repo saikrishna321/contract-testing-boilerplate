@@ -5,9 +5,9 @@ const path = require('path');
 var opts = {
   providerBaseUrl: 'http://localhost:8081',
   provider: 'validDate provider',
-  pactBrokerUrl: 'http://localhost:8282/',
-  pactBrokerUsername: process.env.PACT_USERNAME,
-  pactBrokerPassword: process.env.PACT_PASSWORD,
+  pactBrokerUrl: 'https://test.pact.dius.com.au',
+  pactBrokerUsername: 'dXfltyFMgNOFZAxr8io9wJ37iUpY42M',
+  pactBrokerPassword: 'O5AIZWxelWbLvqMd8PkAVycBJh2Psyg1',
   publishVerificationResult: true,
   consumerVersion: '1.0',
   providerVersion: '1.0',
