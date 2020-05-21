@@ -3,7 +3,7 @@ const path = require('path');
 
 let opts = {
   pactFilesOrDirs: [path.resolve(__dirname, '../../../pacts/')],
-  pactBroker: 'http://localhost:8282/',
+  pactBroker: 'http://pact_broker.com:8282/',
   pactBrokerUsername: process.env.PACT_USERNAME,
   pactBrokerPassword: process.env.PACT_PASSWORD,
   consumerVersion: '1.0',
