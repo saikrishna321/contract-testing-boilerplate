@@ -14,21 +14,7 @@ pipeline {
         }
       }
       
-      stage('Start Provider service') {
-         steps {
-             sh 'npm run provider-service'
-        } 
-        
-      }
-      
-      stage('Run Provider Verifier and Publish to Pact broker') {
-         steps {
-             sh 'npm run provider-service'
-        } 
-        
-      }
-      
-      stage('Publish Consumer Pact to Pact Broker') {
+      stage('Verify Provider  and Publish results to Pact Broker') {
          steps {
              sh 'npm run provider-pact-broker'
         }
