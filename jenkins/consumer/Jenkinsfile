@@ -28,7 +28,7 @@ pipeline {
 
       stage('Deploy') {
          steps {
-            sh 'pact-broker can-i-deploy --pacticipant=DateConsumer --broker-base-url=http://pact_broker.com:9292'
+            sh 'pact-broker can-i-deploy --pacticipant=DateConsumer --broker-base-url=http://pact_broker.com:9292 --latest'
          }
       }
    }
