@@ -25,6 +25,12 @@ pipeline {
              sh 'node src/rest-api/consumer/consumerPactPublish.js'
         }
       }
+
+      stage('Deploy') {
+         steps {
+            sh 'pact-broker can-i-deploy --pacticipant=DateConsumer --broker-base-url=http://pact_broker.com:9292'
+         }
+      }
    }
    
    
