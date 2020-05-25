@@ -6,7 +6,7 @@ let opts = {
   pactBroker: 'http://pact_broker.com:9292',
   pactBrokerUsername: '',
   pactBrokerPassword: '',
-  consumerVersion: '1.0',
+  consumerVersion: '2.0',
   tags: ["prod", "test"]
 };
 
