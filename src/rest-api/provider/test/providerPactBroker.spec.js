@@ -13,6 +13,7 @@ var opts = {
   providerVersion: '1.0',
   logLevel: 'DEBUG',
   timeout: 120000,
+  tags: ["prod", "test"]
 };
 
 describe('Pact Provider verification', () => {
