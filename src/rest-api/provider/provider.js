@@ -5,10 +5,10 @@ const moment = require('moment');
 app.get('/provider/validDate', function(req, res) {
   let validDate = req.query.date;
   if (!validDate) {
-    res.status(404);
+    res.status(400);
     res.json({ error: 'validDate is required' });
   } else if (!moment(validDate, moment.ISO_8601).isValid()) {
-    res.status(404);
+    res.status(400);
     res.json({ error: `'${validDate}' is not a date` });
   } else {
     if (moment(validDate).isValid) {
@@ -20,7 +20,7 @@ app.get('/provider/validDate', function(req, res) {
         count: 10,
       });
     } else {
-      res.status(404);
+      res.status(400);
       res.send();
     }
   }
