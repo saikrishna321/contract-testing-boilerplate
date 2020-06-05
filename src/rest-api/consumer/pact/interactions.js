@@ -36,7 +36,7 @@ module.exports = {
       query: { date: "" }
     },
     willRespondWith: {
-      status: 404,
+      status: 400,
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
