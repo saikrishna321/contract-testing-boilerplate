@@ -36,7 +36,7 @@
     "body-parser": "^1.16.1",
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "moment": "^2.18.1",
+    "moment": "^2.29.4",
     "superagent": "^3.3.2",
     "path": "^0.12.7"
   },
